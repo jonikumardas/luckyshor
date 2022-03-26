@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.container .react-work,
+.props-state {
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 3px 6px 11px black;
+    margin: 10px;
+
+
+}
+
+.how-work {
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 3px 6px 11px black;
+    margin: 10px;
+
+}
+
+@media only screen and (width:360px) {
+    .container {
+        flex-direction: column;
+    }
+
+}

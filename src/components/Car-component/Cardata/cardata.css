@@ -21,6 +21,24 @@ h3 {
     display: flex;
 }
 
+.container button {
+    text-align: center;
+    margin-left: 40px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    box-shadow: 3px 7px 11px rgb(14, 14, 14);
+}
+
+.container button:hover {
+    box-shadow: none;
+    background-color: orangered;
+}
+
+
 @media only screen and (width:360px) {
     .container {
         flex-direction: column;

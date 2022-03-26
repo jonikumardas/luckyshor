@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import CardInfo from '../../cardInfo/CardInfo';
 import Product from '../allCar/Product';
-import './cardata.css'
-
+import './cardata.css';
 const CarData = () => {
     const [cars, setCar] = useState([]);
     const [cards, setCard] = useState([]);
@@ -10,14 +10,19 @@ const CarData = () => {
             .then(res => res.json())
             .then(data => setCar(data))
     }, []);
+    // handle event handeler 
     const handleClick = (product) => {
-        // console.log(product);
-        const NewCard = [...cards, product];
-        console.log(NewCard);
-        setCard(NewCard);
+        console.log(product)
+        if (product.name) {
+            const NewCard = [...cards, product];
+        //  console.log(NewCard);
+            setCard(NewCard);
+        }
+     
     }
-    
-
+    const rendonChose = (cars) => {
+        console.log(cars.name);       
+    }
     return (
         <div className='container'>
             <div className='product-container'>
@@ -31,11 +36,14 @@ const CarData = () => {
             <div className='details-container'>
             <section className='container-product'>
                     <h2> Details section </h2>
-                    <h2> Call data :{cards.length}</h2>
+                    <h2> Total car : {cards.length}</h2>
                     {
-                        cards.map(card=> <h3>Name:{card.name}</h3>)
-                    }
-                   
+                        cards.map(card => <CardInfo key={card.id}
+                            CardInfo={card}
+                        ></CardInfo>)
+
+                    } 
+                     <button onClick={rendonChose(cards)}> Chose one </button>
             </section>
             </div>
         </div>
