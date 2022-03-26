@@ -7,10 +7,6 @@ const Car = () => {
             <section className='main-container'>
                 <CarData></CarData>
             </section>
-
-            <section className='details-container'>
-                <h1> Details section </h1>
-            </section>
         </div>
     );
 };

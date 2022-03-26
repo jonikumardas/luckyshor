@@ -4,7 +4,6 @@ import React from 'react';
 import './product.css'
 
 const Product = (props) => {
-    console.log(props)
     const { name, image, balance, } = props.product;
     return (
         <div>
