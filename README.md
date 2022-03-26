@@ -1,8 +1,12 @@
 # Getting Started with Create React App
+## projects name: lucky-one-jonikumardas
+ my live link [ lucky-one-jonikumardas](https://tourmaline-treacle-e16e43.netlify.app/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
 
 In the project directory, you can run:
 

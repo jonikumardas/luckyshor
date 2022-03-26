@@ -15,13 +15,12 @@ const CarData = () => {
         console.log(product)
         if (product.name) {
             const NewCard = [...cards, product];
-        //  console.log(NewCard);
             setCard(NewCard);
         }
      
     }
-    const rendonChose = (cars) => {
-        console.log(cars.name);       
+    const rendonChose = () => {
+               
     }
     return (
         <div className='container'>
@@ -43,7 +42,7 @@ const CarData = () => {
                         ></CardInfo>)
 
                     } 
-                     <button onClick={rendonChose(cards)}> Chose one </button>
+                     <button onClick={rendonChose()}> Chose one </button>
             </section>
             </div>
         </div>
