@@ -9,6 +9,9 @@ const CarData = () => {
             .then(res => res.json())
             .then(data => setCar(data))
     }, []);
+    const handleClick = (product) => {
+        console.log("click")
+    }
 
     return (
         <div>
@@ -16,7 +19,7 @@ const CarData = () => {
             {
                 cars.map(car => <Product key={car.id}
                 product={car}
-               ></Product>)
+               handleClick={handleClick}></Product>)
                 }
                 </div>
         </div>
