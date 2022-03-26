@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardInfo from '../../cardInfo/CardInfo';
 import Product from '../allCar/Product';
 import './cardata.css';
+
 const CarData = () => {
     const [cars, setCar] = useState([]);
     const [cards, setCard] = useState([]);
@@ -10,16 +11,15 @@ const CarData = () => {
             .then(res => res.json())
             .then(data => setCar(data))
     }, []);
-    // handle event handeler 
+
+    // handle event handeler
     const handleClick = (product) => {
         console.log(product)
-        if (product.name) {
-            const NewCard = [...cards, product];
+          const NewCard = [...cards, product];
             setCard(NewCard);
-        }
-     
     }
     const rendonChose = () => {
+        console.log("props")
                
     }
     return (
@@ -42,7 +42,7 @@ const CarData = () => {
                         ></CardInfo>)
 
                     } 
-                     <button onClick={rendonChose()}> Chose one </button>
+                     <button onClick={rendonChose}> Chose one </button>
             </section>
             </div>
         </div>

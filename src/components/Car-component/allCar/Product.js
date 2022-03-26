@@ -4,7 +4,9 @@ import React from 'react';
 import './product.css'
 
 const Product = (props) => {
-    const { name, image, balance, } = props.product;
+    // console.log(props.handleClick)
+    const{product}=props
+    const { name, image, balance, } =product;
     return (
         <div>
             <div className='product'>
